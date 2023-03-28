@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    int arr[a];
+    //input array from user
+    for(int i=0; i<a; ++i){
+        scanf("%d",&arr[i]);
+    }
+    //finding the largest of the array
+    int largest=arr[0];
+    for(int i=0; i<a; ++i){
+        if(largest<arr[i]){
+            largest=arr[i];
+        }
+    }
+    //finding the second largest of the array
+    //ans used for second largest
+    int ans=arr[0];
+    for(int i=0; i<a; ++i){
+        if(arr[i]>ans && arr[i]<largest){
+            ans=arr[i];
+        }
+    }
+    //printing the results
+    printf("Largest--->> %d\n",largest);
+    printf("Second Largest--->> %d",ans);
+    
+    return 0;
+}
